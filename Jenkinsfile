@@ -28,7 +28,7 @@ pipeline {
         }
        stage('Build') {
     steps {
-        bat 'gradlew clean build -x test'
+        bat 'cd backend && gradlew.bat clean build -x test'
     }
 }
         stage('Deploy to AWS EC2') {
