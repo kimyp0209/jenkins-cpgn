@@ -26,11 +26,11 @@ pipeline {
                 git 'https://github.com/kimyp0209/jenkins-cpgn.git'
             }
         }
-        stage('Build') {
-            steps {
-                bat './gradlew clean build -x test'
-            }
-        }
+       stage('Build') {
+    steps {
+        bat 'gradlew clean build -x test'
+    }
+}
         stage('Deploy to AWS EC2') {
             steps {
                 withCredentials([
