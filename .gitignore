@@ -30,6 +30,5 @@ build/
 
 # 기타
 *.class
-*.jar
 *.war
 *.zip
