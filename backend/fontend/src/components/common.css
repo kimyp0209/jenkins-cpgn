@@ -1,0 +1,203 @@
+.Pretendard {
+    font-family: 'Pretendard-Regular';
+}
+
+header {
+  z-index: 10001;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  padding-bottom:5px;
+}
+
+.headerhover:hover {
+  background-color: white !important;
+  opacity: 0.98; /* 필요 시 조절 */
+}
+
+.logohover {
+    display:none;
+}
+
+.headerhover:hover .hover,
+.hamburger-open .hover {
+  color: #000 !important;
+}
+
+.hamburger-open .logohover {
+  display: block;
+}
+
+.hamburger-open .logo {
+  display: none !important;
+}
+
+.headerfixed {
+  position:fixed;
+  background-color: rgba(248, 248, 248, 1);
+  top:0;
+  left:0;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+  background-color: white;
+  z-index: 999;
+  padding: 5px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.main-swiper {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 100px;
+  color: white;
+}
+
+/* 아래 전체 래퍼 */
+.swiper-bottom-wrapper {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* 진행 바 */
+.swiper-pagination-progressbar {
+  flex: 1;
+  height: 2px !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  margin-right: 40px;
+  position: relative !important;
+}
+
+/* 진행 채우기 */
+.swiper-pagination-progressbar-fill {
+  background: #fff !important;
+  height: 100%;
+  border-radius: 1px;
+}
+
+/* 화살표 묶음 */
+.swiper-arrows {
+  display: flex;
+  gap: 12px;
+}
+
+/* 공통 버튼 스타일 */
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  width: 20px !important;
+  height: 20px !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent !important;
+  opacity: 0.9;
+  position: static !important; /* 기존 위치 제거 */
+  cursor:pointer;
+}
+
+/* 버튼 이미지 설정 */
+.custom-swiper-button-prev {
+  background-image: url('/public/img/left-icon.svg');
+}
+
+.custom-swiper-button-next {
+  background-image: url('/public/img/right-icon.svg');
+}
+
+.cart1024 {
+    display:none;
+  }
+
+
+@media (min-width: 1025px) {
+  .hamburger_hide {
+    display: none !important;
+  }
+}
+
+@media (max-Width:1460px) {
+  .header-in {
+    padding:20px 30px !important;
+  }
+}
+
+@media (max-Width:1024px) {
+  .main_nav {
+    display:none !important;
+  }
+
+  .Pretendard {
+    display:none !important;
+  }
+
+  .cart1024 {
+    display:block;
+  }
+
+  .header-in {
+    padding:10px !important;
+  }
+
+  .footer_in {
+    padding:20px !important;
+  }
+
+  .footer-right h6, .footer-right p {
+    text-align: left !important;
+  }
+
+}
+
+@media (max-width:767px) {
+  .footer_in {
+    display: flex !important; 
+    justify-content: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .footer-right {
+    margin-top: 10px !important;
+  }
+}

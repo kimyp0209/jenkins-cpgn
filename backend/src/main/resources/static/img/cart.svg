@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #222;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="사각형_324" data-name="사각형 324" class="cls-1" width="25" height="30" transform="translate(0.475 -0.017)"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_2109" data-name="그룹 2109" transform="translate(-210 1196)">
+    <g id="그룹_8" data-name="그룹 8" transform="translate(210 -1196)">
+      <rect id="사각형_275" data-name="사각형 275" class="cls-1" width="40" height="40" transform="translate(0 0)"/>
+    </g>
+    <g id="그룹_2107" data-name="그룹 2107" transform="translate(2 55)">
+      <path id="선_14" data-name="선 14" class="cls-2" d="M10,1H0V-1H10Z" transform="translate(223 -1222)"/>
+      <g id="그룹_1478" data-name="그룹 1478" transform="translate(215.525 -1245.983)">
+        <g id="그룹_1477" data-name="그룹 1477" class="cls-3">
+          <path id="선_15" data-name="선 15" class="cls-2" d="M1,22H-1V0H1Z" transform="translate(23.475 7.983)"/>
+          <path id="선_16" data-name="선 16" class="cls-2" d="M1,22H-1V0H1Z" transform="translate(1.475 7.983)"/>
+          <path id="선_17" data-name="선 17" class="cls-2" d="M22,1H0V-1H22Z" transform="translate(1.475 28.983)"/>
+          <path id="선_18" data-name="선 18" class="cls-2" d="M23,1H0V-1H23Z" transform="translate(0.475 8.983)"/>
+          <path id="패스_142" data-name="패스 142" class="cls-2" d="M18.542,8.525h-2V4.567L13.974,2H8.535L6,4.564V8.525H4V3.742L7.7,0h7.1l3.74,3.739Z" transform="translate(1.271 0.254)"/>
+        </g>
+      </g>
+      <rect id="사각형_325" data-name="사각형 325" class="cls-2" width="2" height="5" transform="translate(221 -1238)"/>
+    </g>
+  </g>
+</svg>
