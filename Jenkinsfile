@@ -17,8 +17,6 @@ pipeline {
         TOSS_CLIENT_KEY = 'test_ck_E92LAa5PVbbbmKAkDZmJV7YmpXyJ'
         TOSS_SECRET_KEY = 'test_sk_Z1aOwX7K8mzzkwkOkq2W3yQxzvNP'
         CORS_ALLOWED_ORIGINS = '*'
-        GOOGLE_CLIENT_ID = credentials('GOOGLE_CLIENT_ID')
-        GOOGLE_CLIENT_SECRET = credentials('GOOGLE_CLIENT_SECRET')
         OPEN_API_KEY = credentials('OPEN_API_KEY')
     }
 
@@ -36,9 +34,7 @@ pipeline {
         stage('Deploy to AWS EC2') {
             steps {
                 withCredentials([
-                    string(credentialsId: 'OPEN_API_KEY', variable: 'OPEN_API_KEY'),
-                    string(credentialsId: 'GOOGLE_CLIENT_ID', variable: 'GOOGLE_CLIENT_ID'),
-                    string(credentialsId: 'GOOGLE_CLIENT_SECRET', variable: 'GOOGLE_CLIENT_SECRET')
+                    string(credentialsId: 'OPEN_API_KEY', variable: 'OPEN_API_KEY')
                 ]) {
                     script {
                         writeFile file: '.env', text: """
@@ -52,8 +48,6 @@ MAIL_PASSWORD=${env.MAIL_PASSWORD}
 TOSS_CLIENT_KEY=${env.TOSS_CLIENT_KEY}
 TOSS_SECRET_KEY=${env.TOSS_SECRET_KEY}
 CORS_ALLOWED_ORIGINS=${env.CORS_ALLOWED_ORIGINS}
-GOOGLE_CLIENT_ID=${env.GOOGLE_CLIENT_ID}
-GOOGLE_CLIENT_SECRET=${env.GOOGLE_CLIENT_SECRET}
 OPEN_API_KEY=${env.OPEN_API_KEY}
 """
                     }
