@@ -64,5 +64,5 @@ openai:
     key: ${OPENAI_API_KEY}
 
 google:
-  client-id: dummy-client-id
-  client-secret: dummy-client-secret 
+  client-id: ${GOOGLE_CLIENT_ID:dummy-client-id}
+  client-secret: ${GOOGLE_CLIENT_SECRET:dummy-client-secret}
