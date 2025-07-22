@@ -53,16 +53,15 @@ CORS_ALLOWED_ORIGINS=${env.CORS_ALLOWED_ORIGINS}
 OPEN_API_KEY=${env.OPEN_API_KEY}
 """
                     }
-                bat """
+                    bat """
 echo Step 2: Send .env to EC2
-C:/Users/M/.ssh/pscp.exe -i C:/Users/M/.ssh/tim.ppk -batch -hostkey "ssh-ed25519 255 SHA256:h6fF/KbgIbLrQ4ZjcaJRccjQhrBmBZPu7n3M8VCSEZE" backend/.env ec2-user@ec2-52-79-237-175.ap-northeast-2.compute.amazonaws.com:/home/ec2-user/.env
+C:/Users/M/.ssh/pscp.exe -i C:/Users/M/.ssh/tim.ppk -batch -hostkey "*" backend/.env ec2-user@ec2-52-79-237-175.ap-northeast-2.compute.amazonaws.com:/home/ec2-user/.env
 echo Step 3: Send JAR to EC2
-C:/Users/M/.ssh/pscp.exe -i C:/Users/M/.ssh/tim.ppk -batch -hostkey "ssh-ed25519 255 SHA256:h6fF/KbgIbLrQ4ZjcaJRccjQhrBmBZPu7n3M8VCSEZE" backend/build/libs/app1-0.0.1-SNAPSHOT.jar ec2-user@ec2-52-79-237-175.ap-northeast-2.compute.amazonaws.com:/home/ec2-user/
+C:/Users/M/.ssh/pscp.exe -i C:/Users/M/.ssh/tim.ppk -batch -hostkey "*" backend/build/libs/app1-0.0.1-SNAPSHOT.jar ec2-user@ec2-52-79-237-175.ap-northeast-2.compute.amazonaws.com:/home/ec2-user/
 echo Step 4: Restart app on EC2
-C:/Users/M/.ssh/plink.exe -i C:/Users/M/.ssh/tim.ppk -batch -hostkey "ssh-ed25519 255 SHA256:h6fF/KbgIbLrQ4ZjcaJRccjQhrBmBZPu7n3M8VCSEZE" ec2-user@ec2-52-79-237-175.ap-northeast-2.compute.amazonaws.com ^
+C:/Users/M/.ssh/plink.exe -i C:/Users/M/.ssh/tim.ppk -batch -hostkey "*" ec2-user@ec2-52-79-237-175.ap-northeast-2.compute.amazonaws.com ^
 "pkill -f app1-0.0.1-SNAPSHOT.jar || true; set -a; source /home/ec2-user/.env; set +a; nohup java -jar /home/ec2-user/app1-0.0.1-SNAPSHOT.jar > app.log 2>&1 &"
 """
-
                 }
             }
         }
