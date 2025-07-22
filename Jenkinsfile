@@ -53,7 +53,7 @@ CORS_ALLOWED_ORIGINS=${env.CORS_ALLOWED_ORIGINS}
 OPEN_API_KEY=${env.OPEN_API_KEY}
 """
                     }
-                    // .env와 JAR의 실제 경로에 주의!
+                    // .env, JAR 파일 전송 & EC2에서 실행 (경로는 실제 빌드 구조 맞춰야 함)
                     bat """
                         echo Step 2: Send .env to EC2
                         C:/Users/M/.ssh/pscp.exe -i C:/Users/M/.ssh/tim.ppk -batch -hostkey "ssh-ed25519 255 SHA256:h6fF/KbgIbLrQ4ZjcaJRccjQhrBmBZPu7n3M8VCSEZE" .env ec2-user@ec2-13-209-22-40.ap-northeast-2.compute.amazonaws.com:/home/ec2-user/
