@@ -1,6 +1,6 @@
 spring:
   config:
-    import: optional:file:.env[.properties]  # ✅ .env에서 값 불러오기
+    import: optional:file:.env[.properties]
   application:
     name: app1
   datasource:
@@ -42,7 +42,7 @@ spring:
 
 server:
   port: 8003
-  address: 0.0.0.0  # 🔥 이거 꼭 추가!
+  address: 0.0.0.0
   servlet:
     session:
       cookie:
@@ -52,8 +52,9 @@ server:
 file:
   upload-dir: /uploads
 
+# CORS 허용 도메인을 와일드카드 대신 실제 도메인으로 변경
 cors:
-  allowed-origins: ${CORS_ALLOWED_ORIGINS}
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
 
 toss:
   client-key: ${TOSS_CLIENT_KEY}
