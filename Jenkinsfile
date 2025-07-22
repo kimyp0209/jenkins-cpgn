@@ -53,7 +53,7 @@ CORS_ALLOWED_ORIGINS=${env.CORS_ALLOWED_ORIGINS}
 OPEN_API_KEY=${env.OPEN_API_KEY}
 """
                     }
-                    bat """
+                  bat """
 echo Step 2: Send .env to EC2
 C:/Users/M/.ssh/pscp.exe -i C:/Users/M/.ssh/tim.ppk -batch backend/.env ec2-user@ec2-52-79-237-175.ap-northeast-2.compute.amazonaws.com:/home/ec2-user/.env
 echo Step 3: Send JAR to EC2
