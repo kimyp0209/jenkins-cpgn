@@ -3,7 +3,6 @@ spring:
     import: optional:file:.env[.properties]  # ✅ .env에서 값 불러오기
   application:
     name: app1
-
   datasource:
     url: jdbc:mariadb://${DB_HOST:localhost}:3306/${DB_NAME:myapp}?characterEncoding=UTF-8
     username: ${DB_USER:jenkins}
@@ -64,4 +63,5 @@ openai:
   api:
     key: ${OPENAI_API_KEY}
 
-
+google:
+  client-id: dummy-client-id
