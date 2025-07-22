@@ -18,6 +18,8 @@ pipeline {
         TOSS_SECRET_KEY = 'test_sk_Z1aOwX7K8mzzkwkOkq2W3yQxzvNP'
         CORS_ALLOWED_ORIGINS = '*'
         OPEN_API_KEY = credentials('OPEN_API_KEY')
+        GOOGLE_CLIENT_ID=dummy-client-id
+GOOGLE_CLIENT_SECRET=dummy-client-secret
     }
 
     stages {
@@ -64,6 +66,8 @@ TOSS_CLIENT_KEY=${env.TOSS_CLIENT_KEY}
 TOSS_SECRET_KEY=${env.TOSS_SECRET_KEY}
 CORS_ALLOWED_ORIGINS=${env.CORS_ALLOWED_ORIGINS}
 OPEN_API_KEY=${env.OPEN_API_KEY}
+GOOGLE_CLIENT_ID=dummy-client-id
+GOOGLE_CLIENT_SECRET=dummy-client-secret
 """
                     }
                     bat """
